@@ -4,15 +4,6 @@
 
 > Tabela:
 
-> - id 
-> - nome_instrumento
-> - nome_cliente
-> - email_cliente
-> - valor_unitario
-> - data_compra
-> - quantidade_compra
-
-
 ## 🛠 Tecnologias
 
 > Back-End:
@@ -30,5 +21,4 @@
 Para baixar o repositório local: 
 
 ```bash
-
 ```
