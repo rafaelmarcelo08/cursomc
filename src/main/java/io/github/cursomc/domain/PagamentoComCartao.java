@@ -1,9 +1,12 @@
 package io.github.cursomc.domain;
 
+import javax.persistence.Entity;
+
 import io.github.cursomc.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoComCartao extends Pagamento {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	private Integer numeroDeParcelas;
@@ -11,11 +14,11 @@ public class PagamentoComCartao extends Pagamento {
 	public PagamentoComCartao() {
 	}
 
-	public PagamentoComCartao(Integer id, EstadoPagamento estado, Integer numeroDeParcelas) {
-		super(id, estado);
+	public PagamentoComCartao(Integer id, EstadoPagamento estado, Pedido pedido,  Integer numeroDeParcelas) {
+		super(id, estado, pedido);
 		this.numeroDeParcelas = numeroDeParcelas;
-
 	}
+
 
 	public Integer getNumeroDeParcelas() {
 		return numeroDeParcelas;

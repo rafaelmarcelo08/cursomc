@@ -2,8 +2,11 @@ package io.github.cursomc.domain;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import io.github.cursomc.domain.enums.EstadoPagamento;
 
+@Entity
 public class PagamentoComBoleto extends Pagamento {
 
 	private static final long serialVersionUID = 1L;
@@ -13,9 +16,9 @@ public class PagamentoComBoleto extends Pagamento {
 
 	public PagamentoComBoleto() {
 	}
-
-	public PagamentoComBoleto(Integer id, EstadoPagamento estado, Date dataVencimento, Date pagamento) {
-		super(id, estado);
+	
+	public PagamentoComBoleto(Integer id, EstadoPagamento estado, Pedido pedido,Date dataVencimento, Date pagamento) {
+		super(id, estado, pedido);
 		this.dataVencimento = dataVencimento;
 		this.pagamento = pagamento;
 	}
